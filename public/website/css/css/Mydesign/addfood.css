@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Dosis:400,700');
+
+$base-color: #143544;
+$standard-distance: 24px;
+$orange-faded: rgb(255, 238, 231);
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: $base-color;
+  text-decoration: none;
+}
+
+body {
+  background: $base-color;
+  font-family: 'Dosis', sans-serif;
+  color: white;
+
+}
+
+h1 {
+  font-family: 'Bitter', serif;
+  color: white;
+}
+
+form {
+  padding: 0 ($standard-distance/2);
+}
+
+.row {
+  margin: 0 0 $standard-distance 0;
+}
+
+.col {
+ width: 100%;
+ margin-bottom: $standard-distance;
+}
+
+@media (min-width: 400px) {
+  .row {
+    overflow: hidden;
+    margin: ($standard-distance/2) 0 ($standard-distance/2) (-$standard-distance);
+  }
+  .col {
+    float: left;
+    padding-left: $standard-distance;
+    margin-bottom: 0;
+
+    &.col50 {
+      width: 50%;
+    }
+
+    &.col33 {
+      width: 33.33333%;
+    }
+
+    &.col25 {
+      width: 25%;
+    }
+  }
+  form {
+    padding: 0 ($standard-distance);
+  }
+}
+
+.wrapper {
+  max-width: 640px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+//////// styling des Formulars 
+
+button {
+  margin: 0 0 80px;
+  height: 45px;
+  width: 120px;
+  background: white;
+  border: 1px solid darkgrey;
+  &:hover {
+    color: orangered;
+    font-weight: 700;
+    box-shadow: 0 5px 10px rgba(0,0,0, 0.5);
+  }
+}
+
+textarea {
+  width: 100%;
+}
+
+label, .label {
+  display: block;
+  font-size: 0.9em;
+  color: white;
+  margin-bottom: 5px;
+  
+  &.checkbox {
+    width: 100%;
+  }
+}
+
+
+.field {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0;
+  &:focus {
+    box-shadow: 0 0 10px white;
+  }
+}
+
+ul {
+  margin: 0 0 45px;
+  padding: 5px 0;
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  display: block;
+  &:hover > a, a.is-active {
+    color: orangered;
+  }
+  
+  a {
+    height: 100%;
+    width: 100%;
+    padding-top: 4px;
+    display: inline-block;
+    margin: 10px auto;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 400px) {
+  ul {
+    width: 100%;
+    height: 54px;
+    overflow: hidden;
+
+    li {
+      display: inline-block;
+      width: 25%;
+      float: left;
+      margin-top: 0;
+      &:hover {
+        border-bottom: 5px solid orangered;
+      }
+    }
+  }
+}

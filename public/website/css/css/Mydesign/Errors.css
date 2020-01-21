@@ -1,0 +1,16 @@
+.error{
+	width: 40%;
+	height: auto;
+	margin-left: 30%;
+	margin-top: 400px;
+	font-size: 20px;
+	background-color: #f35d5d;
+	border: 1px solid white;
+	border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .8;
+}
+
+h4{
+	margin-left: 25px;
+}
